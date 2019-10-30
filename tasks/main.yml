@@ -1,0 +1,12 @@
+---
+- block:
+  - name: install the desired packages
+    pkgng:
+      name: "{{ packages_to_install }}"
+      state: latest
+
+  - name: uninstall the desired packages
+    pkgng:
+      name: "{{ packages_to_uninstall }}"
+      state: absent
+  become: true

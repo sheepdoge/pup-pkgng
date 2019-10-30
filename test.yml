@@ -1,0 +1,13 @@
+---
+- hosts: all
+
+  vars:
+    packages_to_install:
+      - git
+      - tmux
+
+    packages_to_uninstall:
+      - tmux
+
+  tasks:
+    - include_tasks: tasks/main.yml
